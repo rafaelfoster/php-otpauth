@@ -1,0 +1,8 @@
+<?php
+
+class otpauth {
+    
+    public function checkRecoveryCode($secret,$code) {
+    
+}
+
