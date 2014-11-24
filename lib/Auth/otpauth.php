@@ -12,7 +12,7 @@ class otpauth {
 	for ($i = 0; $i<=$MAXRECOVERYCODES; $i++){
 	    $recoverycodes[] = $this->generateRandomString()."-".$this->generateRandomString();
 	}
-	return $recoverycodes[];
+	return $recoverycodes;
     }
 
     public function generateRandomString(){
