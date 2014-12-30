@@ -14,7 +14,7 @@
 		require_once("lib/Auth/GoogleAuthenticator.php");
 
 	} else {
-		print "ERR \n Token not valid";
+		print "ERR \n Config file not found!";
 		exit
 	}
 
@@ -31,8 +31,8 @@
 	if ( $gooAuth->checkCode($secret,$code) ) {
 		print "OK";
 	} else {
-  	   if ( $otpauth->checkRecoveryCode($code) )
+		if ( $otpauth->checkRecoveryCode($code) )
 			print "OK";
-	   else
+		else
 			print "ERR \n Token not valid";
 	}

@@ -19,21 +19,7 @@
 <?php
 	include_once("lib/Auth/GoogleAuthenticator.php");
 
-	$secret = 'XVQ2UIGO75XRUKJO';
-	$time = floor(time() / 30);
-	$code = "846474";
 	$g = new GoogleAuthenticator();
-
-	print "Current Code is: ";
-	print $g->getCode($secret) . "<br>";
-	print "Check if $code is valid: <br>";
-
-	if ($g->checkCode($secret,$code)) {
-		print "YES <br>";
-	} else {
-		print "NO <br>";
-	}
-
 	$secret = $g->generateSecret();
 
 	print "Get a new Secret: $secret " . "<br>";
