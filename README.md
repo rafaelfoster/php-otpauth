@@ -9,4 +9,4 @@ to provide a two factor PAM authentication without the need to install any speci
 Used libs:
 Google Authenticator by chregu: https://github.com/chregu/GoogleAuthenticator.php
 PHP Mysql Class by joshcam: https://github.com/joshcam/PHP-MySQLi-Database-Class
-
+Jquery-QrCode: http://larsjung.de/jquery-qrcode/
