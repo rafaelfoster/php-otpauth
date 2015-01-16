@@ -1,4 +1,9 @@
 <?php
+
+	if (!empty($_REQUEST['mode'])) {
+		require("checkcode.php");
+	}
+	
 	if ( require_once("lib/config/config_db.php") ){
 		require_once("lib/db/MysqliDb.php");
 		$db = new MysqliDb ($host, $username,$password, $dbname);

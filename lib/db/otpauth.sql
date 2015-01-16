@@ -21,7 +21,7 @@ CREATE TABLE `otp_users` (
   `ID` int(4) NOT NULL AUTO_INCREMENT,
   `USER` varchar(30) NOT NULL,
   `EMAIL` varchar(50) NOT NULL,
-  `SECRETKEY` varchar(10) NOT NULL,
+  `SECRETKEY` varchar(30) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB;
 
@@ -46,9 +46,10 @@ CREATE TABLE `otp_logaccess` (
 
 DROP TABLE IF EXISTS `otp_recoverycodes`;
 CREATE TABLE `otp_recoverycodes` (
-  `ID` int(4) NOT NULL,
+  `ID` int(4) NOT NULL AUTO_INCREMENT,
   `USER_ID` int(4) NOT NULL,
   `RECOVERYCODE` varchar(5) NOT NULL,
+  `CODE_USED` tinyint(1) DEFAULT 0 NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `USER_ID` (`USER_ID`),
   CONSTRAINT `otp_recoverycodes_ibfk_1` FOREIGN KEY (`USER_ID`) REFERENCES `otp_users` (`ID`)
